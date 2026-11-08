@@ -1,0 +1,59 @@
+{
+  "name": "dsh-workspace-memory",
+  "version": "0.1.0",
+  "description": "Per-workspace reusable context memories for DeepSeek Harness: compose memory sets like {abc,bcd}, bind them to workspaces, inject within budget, and distill new candidates after each turn. · DSH 按工作区投放的可复用上下文记忆。",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "workspace",
+    "context",
+    "agents-md"
+  ],
+  "license": "MIT",
+  "author": "Artorias-Adon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artorias-Adon/dsh-workspace-memory.git"
+  },
+  "homepage": "https://github.com/Artorias-Adon/dsh-workspace-memory#readme",
+  "bugs": {
+    "url": "https://github.com/Artorias-Adon/dsh-workspace-memory/issues"
+  },
+  "scripts": {
+    "test": "node test/logic.test.mjs && node test/store.test.mjs && node test/distill.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.1.0",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "@deepseek-ai/dsh-tools": ">=0.2.2-rc.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": { "optional": true },
+    "@deepseek-ai/schemastery": { "optional": true },
+    "@deepseek-ai/dsh-tools": { "optional": true }
+  }
+}
