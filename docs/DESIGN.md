@@ -1,4 +1,4 @@
-# 设计说明 · dsh-workspace-memory
+# 设计说明 · dsh-memory-workspace-sets
 
 > 一句话：把「通用上下文记忆」变成可复用、可组合、可审计的资产，按工作区精确投放，并让对话自动长出候选记忆。
 

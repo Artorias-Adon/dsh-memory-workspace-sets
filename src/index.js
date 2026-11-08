@@ -1,5 +1,5 @@
 /**
- * dsh-workspace-memory — 按工作区投放可复用的上下文记忆。
+ * dsh-memory-workspace-sets — 按工作区投放可复用的上下文记忆。
  *
  * 插件形态：`apply(ctx, config)` + `inject` + `Config`。
  * 注入点：systemPrompt 的 dynamic context（每轮组装时重新求值）。

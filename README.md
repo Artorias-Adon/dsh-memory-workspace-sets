@@ -1,4 +1,4 @@
-# dsh-workspace-memory
+# dsh-memory-workspace-sets
 
 **给 DeepSeek Harness 的可复用上下文记忆：按工作区精确投放，不再复制粘贴 AGENTS.md。**
 
@@ -63,17 +63,23 @@ bindings:
 
 ## 安装
 
-要求 DSH `>=0.2.2-rc.1 <0.3.0`。插件是纯 ESM，无构建步骤。
+要求 DSH `>=0.2.2-rc.1 <0.3.0`。插件是纯 ESM，无构建步骤，**未发布到 npm**。
 
-**从本地目录安装**（开发和自用推荐）：
+**从 GitHub 安装**（推荐）：
 
-1. 克隆到任意固定目录，例如 `D:\work\dsh-workspace-memory`。
+```bash
+dsh plugin --profile web add github:Artorias-Adon/dsh-memory-workspace-sets
+```
+
+**从本地目录安装**（开发时）：
+
+1. 克隆到任意固定目录，例如 `D:\work\dsh-memory-workspace-sets`。
 2. 让 DSH 安装这个目录为 bundle：插件管理器的 `install_bundle` 接受绝对路径
-   （`D:\work\dsh-workspace-memory`、`file:D:\work\dsh-workspace-memory` 或 `link:` 形式）。
+   （`D:\work\dsh-memory-workspace-sets`、`file:...` 或 `link:...` 形式）。
 3. 重启 DSH（该插件是 host 侧插件，需要重新加载 profile）。
 4. 在设置里的插件页确认 `workspace-memory` 已启用。
 
-**从 npm 安装**（发布后）：`install_bundle` 用包名 `dsh-workspace-memory` 即可。
+> 仓库名与包名一致（`dsh-memory-workspace-sets`），但 npm 上同名包不属于本项目，请始终按 `github:` 或本地路径安装。
 
 ## 配置
 
@@ -81,7 +87,7 @@ bindings:
 
 ```yaml
 - id: workspace-memory
-  name: 'dsh-workspace-memory'
+  name: 'dsh-memory-workspace-sets'
   config:
     enabled: true
     maxInjectBytes: 8000

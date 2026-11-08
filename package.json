@@ -1,6 +1,6 @@
 {
-  "name": "dsh-workspace-memory",
-  "version": "0.1.0",
+  "name": "dsh-memory-workspace-sets",
+  "version": "0.2.0",
   "description": "Per-workspace reusable context memories for DeepSeek Harness: compose memory sets like {abc,bcd}, bind them to workspaces, inject within budget, and distill new candidates after each turn. · DSH 按工作区投放的可复用上下文记忆。",
   "type": "module",
   "main": "./src/index.js",
@@ -32,11 +32,11 @@
   "author": "Artorias-Adon",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Artorias-Adon/dsh-workspace-memory.git"
+    "url": "git+https://github.com/Artorias-Adon/dsh-memory-workspace-sets.git"
   },
-  "homepage": "https://github.com/Artorias-Adon/dsh-workspace-memory#readme",
+  "homepage": "https://github.com/Artorias-Adon/dsh-memory-workspace-sets#readme",
   "bugs": {
-    "url": "https://github.com/Artorias-Adon/dsh-workspace-memory/issues"
+    "url": "https://github.com/Artorias-Adon/dsh-memory-workspace-sets/issues"
   },
   "scripts": {
     "test": "node test/logic.test.mjs && node test/store.test.mjs && node test/distill.test.mjs"

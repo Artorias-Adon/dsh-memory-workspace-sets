@@ -1,5 +1,5 @@
-# dsh-workspace-memory：按工作区投放可复用的上下文记忆。
+# dsh-memory-workspace-sets：按工作区投放可复用的上下文记忆。
 # 插件本体只注册一个行；注入点在 systemPrompt 的 dynamic context。
 - insert:
     - id: workspace-memory
-      name: 'dsh-workspace-memory'
+      name: 'dsh-memory-workspace-sets'
